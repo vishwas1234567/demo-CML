@@ -224,7 +224,7 @@ plt.close(fig)
 # Model Validation
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
-Cross validate model with Kfold stratified cross val
+# Cross validate model with Kfold stratified cross val
 fold = KFold(n_splits=10, shuffle=True, random_state = 2)
 print(fold)
 
