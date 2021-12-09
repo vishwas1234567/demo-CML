@@ -58,8 +58,8 @@ ax = sns.distplot(dataset['MEDV'], bins=30, hist_kws=dict(edgecolor="w", linewid
 ax.set_title('Histogram', fontsize=20)
 ax.set_xlabel('MEDV or Price', fontsize=20)
 ax.set_ylabel('Frequency', fontsize=20)
-plt.savefig("plots/" + "histMEDV.png", dpi=70)
-plt.close(fig)
+plt.savefig("feature_importance1.png",dpi=120) 
+
 #Findings: Values of MEDV are distributed normally with few outliers.
 # -----------------------------------------------------------------
 # Visualize Heatmap of the Dataset
@@ -134,8 +134,8 @@ ax.set_xlabel('MEDV or Price', fontsize=20)
 ax.set_ylabel('Predicted Prices', fontsize=20)
 # Save the Linear Regrassion Plot along with Error value
 plt.text(35.0, 0.0, err, fontsize=20, bbox=dict(facecolor='green', alpha=0.5))
-plt.savefig("plots/" + "LinearRegression.png", dpi=70)
-plt.close(fig)
+plt.savefig("feature_importance2.png",dpi=120) 
+
 # --------------------------------------------------------------------
 # KNN algorithm Training and Predictions
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.20, random_state = 0)
@@ -176,8 +176,8 @@ ax.set_xlabel('MEDV or Price', fontsize=20)
 ax.set_ylabel('Predicted Prices', fontsize=20)
 # Save the KNN Regrassion Plot along with Error value
 plt.text(35.0, 10.0, err, fontsize=20, bbox=dict(facecolor='blue', alpha=0.5))
-plt.savefig("plots/" + "KNNRegression.png", dpi=70)
-plt.close(fig)
+plt.savefig("feature_importance3.png",dpi=120) 
+
 # -------------------------------------------------------------------
 # Gradient Boosting Tree Regression
 # Split the dataset into train and test
@@ -218,8 +218,7 @@ ax.set_xlabel('MEDV or Price', fontsize=20)
 ax.set_ylabel('Predicted Prices', fontsize=20)
 # Save the KNN Regrassion Plot along with Error value
 plt.text(35.0, 10.0, err, fontsize=20, bbox=dict(facecolor='r', alpha=0.5))
-plt.savefig("plots/" + "GradientBoostingRegression.png", dpi=70)
-plt.close(fig)
+plt.savefig("feature_importance.png",dpi=120) 
 # ---------------------------------------------------------------
 # Model Validation
 from sklearn.model_selection import cross_val_score
@@ -230,7 +229,7 @@ print(fold)
 
 
 
-Modeling step Test differents algorithms
+# Modeling step Test differents algorithms
 random_state = 2
 regressors = []
 regressors.append(LinearRegression())

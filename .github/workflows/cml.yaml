@@ -14,9 +14,15 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           python train.py
-          echo "metrices added"
+          echo "metrices added to report.md file"
           cat metrics.txt >> report.md
-          echo "images added"
+          echo "images added to report.md file"
+          cml-publish feature_importance.png --md >> report.md
+          cml-publish feature_importance1.png --md >> report.md
+          cml-publish PearsonHeatMap.png --md >> report.md
+          cml-publish MEDV.png --md >> report.md
+          cml-publish feature_importance2.png --md >> report.md
+          cml-publish feature_importance3.png --md >> report.md
           cml-publish feature_importance.png --md >> report.md
           cml-publish residuals.png --md >> report.md
           
