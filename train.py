@@ -111,8 +111,7 @@ model_lr['MEDV'] = Y_test
 model_lr['Predicted MEDV'] = Y_pred
 
 
-with open("metrics.txt", 'w') as outfile:
-    outfile.write(model_lr.head(10))
+print(model_lr.head(10))
 
 # Measure Performance of the Model
 # Get Mean Squared Error (MSE)
