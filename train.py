@@ -123,8 +123,8 @@ mae = mean_absolute_error(Y_test, Y_pred)
 
 err = "MSE: " + str(round(mse, 2)) + "," + " MAE: " + str(round(mae, 2))
 with open("metrics.txt", 'w') as outfile:
-    outfile.write("Linear Regression Model Performance:-- ", err)
-
+    outfile.write("Linear Regression Model Performance:-- ", str(round(mse, 2)))
+    outfile.write("Linear Regression Model Performance:-- ", str(round(mae, 2)))
 fig = plt.figure(figsize=(12,9))
 ax = sns.regplot(Y_test, Y_pred, marker = 'o', color = 'green')
 ax.set_title('Linear Regrassion', fontsize=20)
