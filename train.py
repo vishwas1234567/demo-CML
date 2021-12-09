@@ -122,9 +122,7 @@ from sklearn.metrics import mean_absolute_error
 mae = mean_absolute_error(Y_test, Y_pred)
 
 err = "MSE: " + str(round(mse, 2)) + "," + " MAE: " + str(round(mae, 2))
-with open("metrics.txt", 'w') as outfile:
-    outfile.write("Linear Regression Model Performance:-- ", str(round(mse, 2)))
-    outfile.write("Linear Regression Model Performance:-- ", str(round(mae, 2)))
+print("Linear Regression Model Performance:-- ", err)
 fig = plt.figure(figsize=(12,9))
 ax = sns.regplot(Y_test, Y_pred, marker = 'o', color = 'green')
 ax.set_title('Linear Regrassion', fontsize=20)
@@ -163,8 +161,7 @@ mae = mean_absolute_error(Y_test, Y_pred)
 
 err = "MSE: " + str(round(mse, 2)) + "," + " MAE: " + str(round(mae, 2))
 
-with open("metrics.txt", 'w') as outfile:
-    outfile.write("KNN Regresson Model Performance:-- ", err)
+print("KNN Regresson Model Performance:-- ", err)
 
 # Create Regression Plot for Test and Prediction values
 fig = plt.figure(figsize=(12,9))
@@ -206,8 +203,7 @@ mae = mean_absolute_error(Y_test, Y_pred)
 err = "MSE: " + str(round(mse, 2)) + "," + " MAE: " + str(round(mae, 2))
 
 
-with open("metrics.txt", 'w') as outfile:
-    outfile.write("Gradient Boosting Regrassion Model Performance:-- ", err)
+print("Gradient Boosting Regrassion Model Performance:-- ", err)
 
 fig = plt.figure(figsize=(12,9))
 ax = sns.regplot(Y_test, Y_pred, marker = 'o', color = 'r')
@@ -241,9 +237,7 @@ for kfold in kfolds :
     print(cv_results)
     print(cv_results.mean())
     print("Kfold = ", kfold, ", MAE ", round(cv_results.mean(), 2))
-
-    with open("metrics.txt", 'w') as outfile:
-        outfile.write("Kfold = ", kfold, ", MAE ", round(cv_results.mean(), 2))
+    print("Kfold = ", kfold, ", MAE ", round(cv_results.mean(), 2))
 
 regressors = [lr, knr, gbr]
 kfolds = [2, 3, 4, 5]
