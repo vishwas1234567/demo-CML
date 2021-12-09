@@ -153,9 +153,13 @@ print(model_knn.head(10))
 # Get Mean Squared Error (MSE)
 from sklearn.metrics import mean_squared_error
 mse = mean_squared_error(Y_test, Y_pred)
+with open("metrics.txt", 'w') as outfile:
+    outfile.write("MSE: %r " % mae)
 # Get Mean Absolute Error (MAE)
 from sklearn.metrics import mean_absolute_error
 mae = mean_absolute_error(Y_test, Y_pred)
+with open("metrics.txt", 'w') as outfile:
+    outfile.write("MAE: %r " % mae)
 
 err = "MSE: " + str(round(mse, 2)) + "," + " MAE: " + str(round(mae, 2))
 
