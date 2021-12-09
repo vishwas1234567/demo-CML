@@ -240,7 +240,7 @@ print("Gradient Boost Regression Cross Validation with KFold:")
 kfolds = [2, 3, 4, 5]
 for kfold in kfolds :
     cv_results = cross_val_score(gbr, X, Y, cv = KFold(kfold, random_state = 0))
-        print(cv_results)
+    print(cv_results)
     print(cv_results.mean())
     print("Kfold = ", kfold, ", MAE ", round(cv_results.mean(), 2))
 
