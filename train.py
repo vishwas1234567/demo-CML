@@ -147,9 +147,7 @@ print("KNN Regresson Model")
 model_knn = pd.DataFrame(X_test)
 model_knn['MEDV'] = Y_test
 model_knn['Predicted MEDV'] = Y_pred
-
-with open("metrics.txt", 'w') as outfile:
-    outfile.write(model_knn.head(10))
+print(model_knn.head(10))
 
 # Measure Performance of the Model
 # Get Mean Squared Error (MSE)
