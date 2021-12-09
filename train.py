@@ -91,11 +91,10 @@ from sklearn.model_selection import train_test_split
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.20, random_state = 0)
 
-with open("metrics.txt", 'w') as outfile:
-    outfile.write("Y Test: ", Y_test.shape)
-    outfile.write("X Test: ", X_test.shape)
-    outfile.write("Y Train: ", Y_train.shape)
-    outfile.write("X Train: ", X_train.shape)
+print("Y Test: ", Y_test.shape)
+print("X Test: ", X_test.shape)
+print("Y Train: ", Y_train.shape)
+print("X Train: ", X_train.shape)
 # --------------------------------------------------------------
 # Linear Rigression
 # Split the dataset into train and test
