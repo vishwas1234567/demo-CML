@@ -9,7 +9,7 @@ plt.xlabel('price ($1000s)')
 plt.ylabel('count')
 plt.tight_layout()
 
-
+#vishwas made some changes
 
 for index, feature_name in enumerate(data.feature_names):
     plt.figure(figsize=(4, 3))
