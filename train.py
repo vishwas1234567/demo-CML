@@ -2,6 +2,9 @@ from sklearn.datasets import load_boston
 data = load_boston()
 
 
+#vishwas tried something
+
+
 import matplotlib.pyplot as plt
 plt.figure(figsize=(4, 3))
 plt.hist(data.target)
