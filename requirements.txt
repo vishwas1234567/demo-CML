@@ -1,5 +1,5 @@
 pandas
-sklearn
+sklearn==1.0.0
 matplotlib
 seaborn
 numpy
