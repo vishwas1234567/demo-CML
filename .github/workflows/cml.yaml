@@ -10,7 +10,6 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-
           pip install --upgrade pip
           pip install -r requirements.txt
           python train.py
